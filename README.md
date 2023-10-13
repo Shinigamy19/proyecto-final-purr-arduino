@@ -4,5 +4,5 @@
 
 <h4>Preview del programa:</h4>
 
-<img src="preview.png">
+<img src="https://github.com/Shinigamy19/proyecto-fional-purr-arduino/blob/main/Preview.png">
  
