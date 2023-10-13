@@ -1,0 +1,45 @@
+#N canvas 170 73 610 419 10;
+#X obj 36 177 *~;
+#X obj 46 64 no.pinknoise~;
+#X msg 46 43 seed 123;
+#X text 112 27 seed message to re-seed (so you can get exactly repeatable
+samples), f 35;
+#X obj 54 244 hsl 128 15 0 0.5 0 0 empty empty volume -2 -8 0 10 #00ff04
+#000000 #000000 0 1;
+#X obj 51 264 pack f 20;
+#X obj 51 285 line~;
+#X obj 36 311 *~;
+#X obj 51 100 tgl 15 1 empty empty pink/white 17 7 0 10 #00faff #000000
+#000000 1 1;
+#X obj 51 120 t f f;
+#X text 234 86 [no.pinknoise~] is a pink noise generator.;
+#X text 234 116 Noise with a frequency spectrum such that the spectral
+energy density is proportional to the reciprocal of the frequency.
+;
+#X text 234 276 Reference ––––;
+#X text 234 296 http://www.firstpr.com.au/dsp/pink-noise/;
+#X text 234 166 Inlets ––––;
+#X text 234 206 Outlets ––––;
+#X text 234 186 1) message - seed;
+#X text 234 226 1) signal - pink noise output;
+#X text 234 246 2) signal - white noise output;
+#X obj 78 141 == 0;
+#X obj 136 177 *~;
+#X obj 36 208 +~;
+#X obj 36 347 dac~ 1 2;
+#X text 234 316 https://github.com/enzienaudio/heavylib;
+#X connect 0 0 21 0;
+#X connect 1 0 0 0;
+#X connect 1 1 20 1;
+#X connect 2 0 1 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 6 0 7 1;
+#X connect 7 0 22 0;
+#X connect 7 0 22 1;
+#X connect 8 0 9 0;
+#X connect 9 0 0 1;
+#X connect 9 1 19 0;
+#X connect 19 0 20 0;
+#X connect 20 0 21 1;
+#X connect 21 0 7 0;
